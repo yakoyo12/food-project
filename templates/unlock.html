@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakoyo | Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% block content %}
+    
+    <!----header section starts---->
+    <header>
+        <a href="#" class="logo"><i class="fas-fa-untensils"></i>Yakoyo Food Canteen.</a>
+        <nav class="navbar">
+            <a class="active" href="#home">home</a>
+            <a href="{% url 'dishes' %}">dishes</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+    </header>
+    
+    <!----header section ends---->
+    
+    <!----search form---->
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here...." name="" id="search-box">
+        <label form="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+<!----home section starts---->
+<section class="home" id="home">
+    <div class="swiper mySwiper home-slider">
+
+        <div class="swiper-wrapper wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our special dishes</span>
+                    <h3>fried chicken</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error possimus dolorum culpa 
+                        officiis fuga beatae numquam consectetur et consequuntur.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/fred.jpeg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our special dishes</span>
+                    <h3>jollof rice</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error possimus dolorum culpa officiis fuga beatae numquam consectetur et consequuntur.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/ric.jpeg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our special dishes</span>
+                    <h3>semo with vegitable</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error possimus dolorum culpa officiis fuga beatae numquam consectetur et consequuntur.</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/efo.jpg' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</section> 
+<!----home section end---->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<script src="js/script.js"></script>!-->
+</body>
+</html>
